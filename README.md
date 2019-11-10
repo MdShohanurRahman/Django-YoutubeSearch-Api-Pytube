@@ -14,7 +14,7 @@
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/MdShohanurRahman/Django-YoutubeSearch-Api-Pytube.git
 ```
 First of all active the virtual env
 
