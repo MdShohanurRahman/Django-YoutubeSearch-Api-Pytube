@@ -1,0 +1,27 @@
+    {%extends 'layouts/base.html'%}
+
+    {% block content %}
+    <div class="container jumbotron" style="width:50%;">
+        <h2>Download Youtube Video</h2>
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success">{{ message }}</div>
+          {% endfor %}
+      {% endif %}
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            <div class="form-group">
+            <label>Enter Youtube Video URL</label>
+            <input type="url" class="form-control" required="required" name="link">
+        </div>
+            <button type="submit" class="save btn btn-success">Download</button>
+        </form>
+
+        <small class="mt-4">Note: It will take few time. When download completed a confirmation message will show</small>
+    </div> 
+
+    {{dirs}}
+
+    {% endblock %}
+
+    

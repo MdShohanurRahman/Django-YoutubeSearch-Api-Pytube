@@ -1,0 +1,49 @@
+{%extends 'layouts/base.html'%}
+{%block content%}
+<main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Search YouTube</h1>
+        <p class="lead text-muted">Get the top nine results on YouTube for your query!</p>
+        <form method="POST">
+          <div class="input-group mb-3">
+            {% csrf_token %}
+            <input type="text" name="search" class="form-control" aria-label="Username">
+          </div>
+          <p>
+            <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
+            <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for video in videos %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ video.thumbnail }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+              <div class="card-body">
+                <p class="card-text">{{ video.title }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a type="button" target="_blank" href="{{ video.url }}" class="btn btn-sm btn-primary">View</a>
+                    <a type="button" target="_blank" href="https://en.savefrom.net/#url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{video.id}}&utm_source=ff&utm_medium=extensions&utm_campaign=link_modifier" class="btn btn-sm btn-success">Download</a>
+                    </div>
+                    <small class="text-muted">{{ video.duration }} mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </main>
+{%endblock%}
+
