@@ -1,7 +1,7 @@
 # Django Youtube Search Api And Pytube Library For Download Youtube Video
 
 [![Python Version](https://img.shields.io/badge/python-3.7-brightgreen.svg)](https://python.org)
-[![Django Version](https://img.shields.io/badge/django-2.1-brightgreen.svg)](https://djangoproject.com)
+[![Django Version](https://img.shields.io/badge/django-2.2-brightgreen.svg)](https://djangoproject.com)
 
 # Features
  1. Search first 9 video from youtube
