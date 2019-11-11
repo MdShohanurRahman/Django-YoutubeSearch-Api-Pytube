@@ -2,6 +2,9 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.7-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-2.2-brightgreen.svg)](https://djangoproject.com)
+[![Bootstrap Version](https://img.shields.io/badge/bootstrap-4.1-blue)](https://getbootstrap.com/)
+![Build](https://img.shields.io/badge/build-passing-success)
+
 
 # Features
  1. Search first 9 video from youtube
